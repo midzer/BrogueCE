@@ -61,7 +61,7 @@ ifeq ($(DEBUG),YES)
 cflags += -g -Og
 cppflags += -DENABLE_PLAYBACK_SWITCH
 else
-cflags += -O2
+cflags += -O3 -flto -fno-rtti -fno-exceptions
 endif
 
 # Add user-provided flags.
